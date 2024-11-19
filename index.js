@@ -40,7 +40,7 @@ app.get("/usuarios", async (req, res) => {
 app.post("/login", (req, res) => {
   const { username, password } = req.body;
 
-  let userFound = false;
+  let userFound = true;
 
   for (let i = 0; i < users.length; i++) {
     if (users[i].username === username && users[i].password === password) {
